@@ -82,11 +82,11 @@ function dropSec() {
 function dropMin() {
   if (second() % 15 == 0) {
     minDrop = 0;
-    image(lemon, 275, minDrop, 50, 50);
+    image(orange, 275, minDrop, 50, 50);
+    minDrop += 10;
     //fill(50);
     //ellipse(300, yDrop, 25, 25);
   }
-  minDrop += 5;
 }
 
 function dropHour() {
