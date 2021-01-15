@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-  //background(247, 238, 237);
+  background(255, 255, 255);
   drawAxis();
   dropSec();
   dropMin();
