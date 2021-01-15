@@ -29,12 +29,15 @@ function draw() {
   hourHeight = 600 - (hour() * 480/24)
 
   fill(247, 32, 32);
+  noStroke();
   rect(100, secHeight, 100, second() * 480/60);
 
   fill(255, 167, 15);
+  noStroke();
   rect(250, minHeight, 100, minute() * 480/60);
 
   fill(252, 249, 61);
+  noStroke();
   rect(400, hourHeight, 100, hour() * 480/24);
 
   image(pacman, 100, secHeight - 65, 100, 100)
