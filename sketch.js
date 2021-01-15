@@ -2,15 +2,21 @@ let yDrop;
 let secHeight;
 let minHeight;
 let hourHeight;
-let pacman;
+let pacman, cherry, lemon, orange, strawberry;
+let food;
 
 function preload(){
-  pacman = loadImage("./pacman.png");
+  pacman = loadImage("./assets/pacman.png");
+  cherry = loadImage("./assets/cherry.png");
+  lemon = loadImage("./assets/lemon.png");
+  orange = loadImage("./assets/orange.png");
+  strawberry = loadImage("./assets/strawberry.png");
 }
 
 function setup() {
   createCanvas(600, 600);
   yDrop = 0;
+  food = [cherry, lemon, orange, strawberry]
 }
 
 function draw() {
@@ -63,7 +69,8 @@ function drawAxis() {
 }
 
 function dropSec() {
-  ellipse(150, yDrop, 25, 25);
+  //ellipse(150, yDrop, 25, 25);
+  image(cherry, 150, yDrop, 50, 50)
   yDrop += 10;
   if (yDrop >= secHeight) {
     yDrop = 0;
