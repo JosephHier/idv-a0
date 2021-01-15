@@ -1,4 +1,5 @@
 let yDrop;
+let minDrop;
 let secHeight;
 let minHeight;
 let hourHeight;
@@ -16,6 +17,7 @@ function preload(){
 function setup() {
   createCanvas(600, 600);
   yDrop = 0;
+  minDrop = 0;
   food = [cherry, lemon, orange, strawberry]
 }
 
@@ -79,12 +81,12 @@ function dropSec() {
 
 function dropMin() {
   if (second() == 0) {
+    minDrop = 0;
+    image(lemon, 275, minDrop, 25, 25);
     //fill(50);
     //ellipse(300, yDrop, 25, 25);
-    let minDrop = 0;
-    image(lemon, 275, minDrop, 25, 25)
-    minDrop += 20;
   }
+  minDrop += 5;
 }
 
 function dropHour() {
