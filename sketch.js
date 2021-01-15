@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-  background(247, 238, 237);
+  //background(247, 238, 237);
   drawAxis();
   dropSec();
   dropMin();
@@ -77,16 +77,14 @@ function dropSec() {
 }
 
 function dropMin() {
-  if (second() == 0) {
-    image(orange, 275, yDrop, 50, 50);
+  if (second() % 5 == 0) {
+    image(cherry, 275, yDrop, 50, 50);
   }
 }
 
 function dropHour() {
   //if (minute() == 0) {
   if (true) {
-    fill(50);
-    image(orange, 375, yDrop, 50, 50);
-    ellipse(400, yDrop, 25, 25);
+    image(orange, 425, yDrop, 50, 50);
   }
 }
