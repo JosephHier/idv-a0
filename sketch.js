@@ -64,7 +64,7 @@ function drawAxis() {
 
 function dropSec() {
   ellipse(150, yDrop, 25, 25);
-  yDrop += 10 * ((480-secHeight)/480);
+  yDrop += (10 * ((480-secHeight)/480));
   if (yDrop >= secHeight) {
     yDrop = 0;
   }
