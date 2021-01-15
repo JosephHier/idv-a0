@@ -71,7 +71,7 @@ function drawAxis() {
 function dropSec() {
   //ellipse(150, yDrop, 25, 25);
   image(strawberry, 125, yDrop, 50, 50)
-  yDrop += (10 * (1 - second()/60));
+  yDrop += 10;
   if (yDrop >= secHeight) {
     yDrop = 0;
   }
@@ -79,8 +79,11 @@ function dropSec() {
 
 function dropMin() {
   if (second() == 0) {
-    fill(50);
-    ellipse(300, yDrop, 25, 25);
+    //fill(50);
+    //ellipse(300, yDrop, 25, 25);
+    let minDrop = 0;
+    image(lemon, 275, minDrop, 25, 25)
+    minDrop += 20;
   }
 }
 
