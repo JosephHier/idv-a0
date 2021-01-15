@@ -3,8 +3,6 @@ let secHeight;
 let minHeight;
 let hourHeight;
 let pacman, cherry, lemon, orange, strawberry;
-let food;
-let minDropCount;
 
 function preload(){
   pacman = loadImage("./pacman.png");
@@ -17,8 +15,6 @@ function preload(){
 function setup() {
   createCanvas(600, 600);
   yDrop = 0;
-  minDropCount = 0;
-  food = [cherry, lemon, orange, strawberry]
 }
 
 function draw() {
@@ -81,18 +77,16 @@ function dropSec() {
 }
 
 function dropMin() {
-  if (second() == 0 && minDropCount < minute()) {
+  if (second() == 0) {
     image(orange, 275, yDrop, 50, 50);
-    minDropCount++;
-    //fill(50);
-    //ellipse(300, yDrop, 25, 25);
   }
 }
 
 function dropHour() {
-  if (minute() == 0) {
-    minDropCount = 0;
+  //if (minute() == 0) {
+  if (true) {
     fill(50);
+    image(orange, 375, yDrop, 50, 50);
     ellipse(400, yDrop, 25, 25);
   }
 }
