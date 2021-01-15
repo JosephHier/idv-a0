@@ -26,9 +26,9 @@ function draw() {
   rect(250, minHeight, 100, minute() * 480/60);
   rect(400, hourHeight, 100, hour() * 480/24);
 
-  image(pacman, 100, secHeight - 60, 100, 100)
-  image(pacman, 250, minHeight - 60, 100, 100)
-  image(pacman, 400, hourHeight - 60, 100, 100)
+  image(pacman, 100, secHeight - 65, 100, 100)
+  image(pacman, 250, minHeight - 65, 100, 100)
+  image(pacman, 400, hourHeight - 65, 100, 100)
 }
 
 function drawAxis() {
@@ -64,7 +64,7 @@ function drawAxis() {
 
 function dropSec() {
   ellipse(150, yDrop, 25, 25);
-  yDrop += 10;
+  yDrop += 10 - (secHeight/480));
   if (yDrop >= secHeight) {
     yDrop = 0;
   }
