@@ -27,8 +27,14 @@ function draw() {
   secHeight = 600 - (second() * 480/60)
   minHeight = 600 - (minute() * 480/60)
   hourHeight = 600 - (hour() * 480/24)
+
+  fill(247, 32, 32)
   rect(100, secHeight, 100, second() * 480/60);
+
+  fill(255, 167, 15)
   rect(250, minHeight, 100, minute() * 480/60);
+
+  fill(252, 249, 61)
   rect(400, hourHeight, 100, hour() * 480/24);
 
   image(pacman, 100, secHeight - 65, 100, 100)
@@ -68,24 +74,21 @@ function drawAxis() {
 }
 
 function dropSec() {
-  //ellipse(150, yDrop, 25, 25);
   image(cherry, 125, yDrop, 50, 45)
   yDrop += 10;
   if (yDrop >= 600) {
-  //if (yDrop >= secHeight) {
     yDrop = 0;
   }
 }
 
 function dropMin() {
-  if (second() % 5 == 0) {
+  if (second() == 0) {
     image(orange, 275, yDrop, 50, 60);
   }
 }
 
 function dropHour() {
-  //if (minute() == 0) {
-  if (true) {
+  if (minute() == 0) {
     image(bann, 425, yDrop, 50, 50);
   }
 }
