@@ -2,14 +2,15 @@ let yDrop;
 let secHeight;
 let minHeight;
 let hourHeight;
-let pacman, cherry, lemon, orange, strawberry;
+let pacman, cherry, lemon, orange, strawberry, bann;
 
 function preload(){
   pacman = loadImage("./pacman.png");
   cherry = loadImage("./cherry.png");
   lemon = loadImage("./lemon.jpg");
-  orange = loadImage("./orange.png");
+  orange = loadImage("./orange.jpg");
   strawberry = loadImage("./strawberry.png");
+  bann = loadImage("./bann.jpg")
 }
 
 function setup() {
@@ -68,7 +69,7 @@ function drawAxis() {
 
 function dropSec() {
   //ellipse(150, yDrop, 25, 25);
-  image(strawberry, 125, yDrop, 50, 50)
+  image(cherry, 125, yDrop, 50, 45)
   yDrop += 10;
   if (yDrop >= 600) {
   //if (yDrop >= secHeight) {
@@ -78,13 +79,13 @@ function dropSec() {
 
 function dropMin() {
   if (second() % 5 == 0) {
-    image(cherry, 275, yDrop, 50, 50);
+    image(orange, 275, yDrop, 50, 60);
   }
 }
 
 function dropHour() {
   //if (minute() == 0) {
   if (true) {
-    image(orange, 425, yDrop, 50, 50);
+    image(bann, 425, yDrop, 50, 50);
   }
 }
