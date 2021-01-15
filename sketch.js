@@ -70,8 +70,8 @@ function drawAxis() {
 
 function dropSec() {
   //ellipse(150, yDrop, 25, 25);
-  image(cherry, 150, yDrop, 50, 50)
-  yDrop += 10;
+  image(strawberry, 125, yDrop, 50, 50)
+  yDrop += (10 * (1 - second()/60));
   if (yDrop >= secHeight) {
     yDrop = 0;
   }
