@@ -80,9 +80,9 @@ function dropSec() {
 }
 
 function dropMin() {
-  if (second() == 0) {
+  if (second() % 15 == 0) {
     minDrop = 0;
-    image(lemon, 275, minDrop, 25, 25);
+    image(lemon, 275, minDrop, 50, 50);
     //fill(50);
     //ellipse(300, yDrop, 25, 25);
   }
