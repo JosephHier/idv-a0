@@ -6,11 +6,11 @@ let pacman, cherry, lemon, orange, strawberry;
 let food;
 
 function preload(){
-  pacman = loadImage("./assets/pacman.png");
-  cherry = loadImage("./assets/cherry.png");
-  lemon = loadImage("./assets/lemon.png");
-  orange = loadImage("./assets/orange.png");
-  strawberry = loadImage("./assets/strawberry.png");
+  pacman = loadImage("./pacman.png");
+  cherry = loadImage("./cherry.png");
+  lemon = loadImage("./lemon.jpg");
+  orange = loadImage("./orange.png");
+  strawberry = loadImage("./strawberry.png");
 }
 
 function setup() {
