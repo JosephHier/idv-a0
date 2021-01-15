@@ -47,7 +47,7 @@ function draw() {
 
 function drawAxis() {
   stroke('#222222');
-  strokeWeight(2);
+  strokeWeight(1);
   // minute/second axis
   line(35, 600, 35, 120);
   line(30, 480, 40, 480);
